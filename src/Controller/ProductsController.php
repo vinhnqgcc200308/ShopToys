@@ -50,7 +50,7 @@ class ProductController extends AbstractController
             return $this->redirectToRoute('pro_manager');
         }
         
-        return $this->render('product/addProduct.html.twig', [
+        return $this->render('products/addProduct.html.twig', [
             'form' => $form->createView()
         ]);
     }
