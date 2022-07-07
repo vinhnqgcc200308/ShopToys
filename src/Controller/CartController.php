@@ -20,19 +20,18 @@ class CartController extends AbstractController
      */
     public function cartAction(CartRepository $repo): Response
     {
-        $Customers = $this->getCustomers;
+        $customers = $this->getCustomers;
 
-        $cart = $repo->findOneBy(['customer' => $Customers]);
-        $ca = $repo->showCart($Customers, $cart);
+        $cart = $repo->findOneBy(['customers' => $customers]);
+        $cart = $repo->showCart($customers, $cart);
 
-        $price = $repo->sumPrice($Customers, $cart);
+        $price = $repo->sumPrice($customers, $cart);
         $total = $price[0]['Total'];
 
-        return $this->render('cart/index.html.twig', [
-            'cart' => $ca,
+        return $this->render('Cart/index.html.twig', [
+            'cart' => $cart,
             'total' => $total
         ]);
-
         // return $this->array($total);
     }
 }
