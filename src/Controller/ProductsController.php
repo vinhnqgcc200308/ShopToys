@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/products", name="product_page")
+     * @Route("/product", name="product_page")
      */
     public function productAction(ProductsRepository $repo): Response
     {
@@ -28,7 +28,7 @@ class ProductController extends AbstractController
 
 
     /**
-     * @Route("/addProducts", name="add_Product")
+     * @Route("/addProduct", name="add_Product")
      */
     public function addProductAction(ManagerRegistry $res, Request $req): Response
     {
