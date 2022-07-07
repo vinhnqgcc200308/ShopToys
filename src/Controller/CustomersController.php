@@ -12,7 +12,7 @@ class CustomersController extends AbstractController
 {
 
     /**
-     * @Route("/user", name="app_user")
+     * @Route("/customers", name="app_customers")
      */
     public function customersAction(CustomersRepository $repo): Response
     {
