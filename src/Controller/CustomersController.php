@@ -10,16 +10,9 @@ use Symfony\Component\Routing\Annotation\Route;
 date_default_timezone_set("Asia/Ho_Chi_Minh");
 class CustomersController extends AbstractController
 {
-    // #[Route('/customers', name: 'app_customers')]
-    // public function index(): Response
-    // {
-    //     return $this->render('customers/index.html.twig', [
-    //         'controller_name' => 'CustomersController',
-    //     ]);
-    // }
 
     /**
-     * @Route("customers", name="app_customers")
+     * @Route("/customers", name="app_customers")
      */
     public function customersAction(CustomersRepository $repo): Response
     {
